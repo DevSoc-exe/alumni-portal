@@ -1,38 +1,82 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
+  background-color: #C3D7EF;
+  width: 130%;
+  margin: 0;
+  margin-left: 3rem;
+  padding: 6rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 2.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+  font-size: 1.5rem;
+  margin-bottom: 5px; /* Add margin to the bottom of labels */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text_input {
+  padding: 0rem 0rem 3rem; /* Reduce spacing between inputs and "Forgot Password" */
+  flex: 1; /* Distribute available space equally among child elements */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start; /* Align child elements to the left */
+}
+
+input {
+  width: 100%;
+  padding: 10px 0px;
+  margin: 5px 0; /* Adjust the margin to remove the gap */
+  border: 0px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+}
+button:nth-child(3) {
+  margin: 2rem 0rem;
+  background-color: red;
   color: white;
+  border: none;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the "Sign Up" button */
+button:nth-child(4) {
+  margin: 2rem 0rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forgot-password-link {
+  color: #000000;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.forgot-password-link:hover {
+  text-decoration: none;
 }
