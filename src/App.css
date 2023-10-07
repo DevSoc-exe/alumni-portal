@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@500;700&display=swap);
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Roboto";
+  color: #222;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -9,7 +22,7 @@ body {
 
 .App {
   text-align: left;
-  background-color: #C3D7EF;
+  background-color: #c3d7ef;
   width: 130%;
   margin: 0;
   margin-left: 3rem;
@@ -29,16 +42,16 @@ label {
 }
 
 .text_input {
-  padding: 0rem 0rem 3rem; /* Reduce spacing between inputs and "Forgot Password" */
-  flex: 1; /* Distribute available space equally among child elements */
+  padding: 0rem 0rem 3rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align child elements to the left */
+  align-items: flex-start;
 }
 
 input {
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px;
   margin: 5px 0; /* Adjust the margin to remove the gap */
   border: 0px;
   border-radius: 10px;
