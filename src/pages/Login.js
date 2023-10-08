@@ -1,22 +1,5 @@
-import './App.css';
-import React from 'react';
-import { Routes, Route } from "react-router-dom"
+import React, { useState } from 'react';
 
-import { Login } from "./pages/Login"
-import { Signup } from "./pages/Signup"
-
-function App() {
-  return (
-    <React.Fragment>
-      <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-      </Routes>
-    </React.Fragment>
-  );
-}
-
-export default App;import React, { useState } from "react";
 
 export function Login() {
   const [rollNumber, setRollNumber] = useState("");
@@ -43,57 +26,73 @@ export function Login() {
     alert("Sign up functionality not implemented in this example.");
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleLogin();
+    }
+  };
+
   return (
-    <div className="App">
-      {loggedIn ? (
-        <div>
-          <h2>Welcome, {rollNumber}!</h2>
-          <button onClick={() => setLoggedIn(false)}>Log Out</button>
-        </div>
-      ) : (
-        <div>
-          <div className="text_input">
-            <label>Roll Number:</label>
-            <input
-              type="text"
-              value={rollNumber}
-              onChange={(e) => setRollNumber(e.target.value)}
-            />
+    <div className="login_container">
+      <div className="login_panel">
+        {loggedIn ? (
+          <div>
+            <h2>Welcome, {rollNumber}!</h2>
+            <button onClick={() => setLoggedIn(false)}>Log Out</button>
           </div>
-          <div className="text_input">
-            <label>Password:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <div>
-              <span
-                className="forgot-password-link"
-                onClick={() => setShowForgotPassword(true)}
-              >
-                Forgot Password
-              </span>
+        ) : (
+          <div>
+            <div className="text_input">
+              <label>Roll Number:</label>
+              <input
+                type="text"
+                value={rollNumber}
+                onChange={(e) => setRollNumber(e.target.value)}
+              />
+            </div>
+            <div className="text_input">
+              <label>Password:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                onKeyPress={handleKeyPress}
+              />
+              <div>
+                <span
+                  className="forgot-password-link"
+                  onClick={() => setShowForgotPassword(true)}
+                >
+                  Forgot Password
+                </span>
+              </div>
+            </div>
+            <div className="log_sign_btn">
+              <button className="log_btn" onClick={handleLogin}>
+                Log In
+              </button>
+              <button className="sign_btn" onClick={handleSignUp}>
+                Sign Up
+              </button>
             </div>
           </div>
-          <div className="log_sign_btn">
-            <button onClick={handleLogin}>Log In</button>
-            <button onClick={handleSignUp}>Sign Up</button>
-          </div>
-        </div>
-      )}
+        )}
 
-      {showForgotPassword && (
-        <div>
-          <h2>Forgot Password</h2>
+        {showForgotPassword && (
           <div>
-            <label>Enter Your Email:</label>
-            <input type="email" />
+            <h2>Forgot Password</h2>
+            <div>
+              <label>Enter Your Email:</label>
+              <input type="email" />
+            </div>
+            <button onClick={handleForgotPassword}>Submit</button>
+            <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
           </div>
-          <button onClick={handleForgotPassword}>Submit</button>
-          <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
-        </div>
-      )}
+        )}
+      </div>
+      <div className="login_clg">
+        <h1>Alumni Portal</h1>
+      </div>
     </div>
   );
 }
