@@ -25,7 +25,7 @@ body {
   overflow-x: hidden; /* Hide horizontal overflow */
 }
 
-.login_panel {
+.login_panel{
   width: calc(40% - 3rem); /* Set a fixed width for the login panel */
   text-align: left;
   background-color: rgba(195, 215, 239, 0.7);
