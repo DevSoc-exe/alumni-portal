@@ -58,9 +58,8 @@ export function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 onKeyPress={handleKeyPress}
               />
-              <div>
+              <div className='forgot-password-link'>
                 <span
-                  className="forgot-password-link"
                   onClick={() => setShowForgotPassword(true)}
                 >
                   Forgot Password
