@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 export function Login() {
   const [rollNumber, setRollNumber] = useState("");
@@ -56,12 +55,10 @@ export function Login() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyPress}
               />
-              <div className='forgot-password-link'>
-                <span
-                  onClick={() => setShowForgotPassword(true)}
-                >
+              <div className="forgot-password-link">
+                <span onClick={() => setShowForgotPassword(true)}>
                   Forgot Password
                 </span>
               </div>
@@ -91,6 +88,7 @@ export function Login() {
       </div>
       <div className="login_clg">
         <h1>Alumni Portal</h1>
+        <h3>Lorem Ipsum</h3>
       </div>
     </div>
   );
