@@ -18,42 +18,47 @@ body {
   justify-content: flex-start;
   height: 100vh;
 }
+
 .login_container {
   display: flex;
-  justify-content: space-between; /* Create space between panels */
-  width: 100vw; /* Full width of the viewport */
-  overflow-x: hidden; /* Hide horizontal overflow */
+  justify-content: space-between;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-.login_panel{
-  width: calc(32% - 3rem); /* Set a fixed width for the login panel */
+.login_panel {
+  width: calc(32% - 3rem);
   text-align: left;
   background-color: rgba(195, 215, 239, 0.7);
-  margin: 0;
   margin-left: 3rem;
-  padding: 6rem 3rem;
+  padding: 6rem 3rem; /* Adjusted padding here */
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .login_clg {
-  width: calc(40% - 3rem); /* Set a fixed width for the login_clg */
+  width: calc(40% - 3rem);
   display: flex;
-  justify-content: flex-end; /* Align to the right */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   padding: 2rem;
 }
- .login_clg h1{
-  font-size: 5rem;
-  color: #ffffff; 
-  text-shadow: 2px 2px 1px 0px #BA2928;
- }
 
-h2 {
-  font-size: 2.4rem;
+.login_clg h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 1px 0px #BA2928;
 }
 
-label {
+.login_clg h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.text_input label {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
@@ -67,19 +72,13 @@ label {
   align-items: flex-start;
 }
 
-input {
+.text_input input {
   width: 100%;
   padding: 15px 10px;
   margin: 5px 0;
   border: 0;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 6px 0px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 10px;
 }
 
 .log_sign_btn {
@@ -89,34 +88,33 @@ button {
   margin: 2rem 0rem 1rem 0rem;
 }
 
-.log_sign_btn button:first-child {
+.log_sign_btn button {
   flex: 1;
   margin: 0rem 1rem;
-  background-color: #BA2928;
-  color: white;
   border: none;
   border-radius: 10px;
   padding: 15px 15px;
   font-size: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  transition: all 0.3s ease;
 }
 
-.log_sign_btn button:nth-child(2) {
-  flex: 1;
-  margin: 0rem 1rem;
+.log_sign_btn button:first-child {
+  background-color: #BA2928;
+  color: white;
+}
+
+.log_sign_btn button:last-child {
   background-color: #E5E5E5;
   color: black;
-  border: none;
-  border-radius: 10px;
-  padding: 15px ;
-  font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-button:hover {
+.log_sign_btn button:hover {
+  transform: scale(1.05); /* Make the button 5% larger on hover */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px 0px, rgba(0, 0, 0, 0.1) 0px 3px 6px 0px; /* Increase shadow */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .forgot-password-link {
   color: #000000;
   cursor: pointer;
