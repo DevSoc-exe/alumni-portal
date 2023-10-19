@@ -20,10 +20,10 @@ body {
 }
 
 .login_container {
+  padding: 2%;
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 .login_panel {
@@ -49,7 +49,7 @@ body {
 .login_clg h1 {
   font-size: 6.75rem;
   color: #ffffff;
-  text-shadow: 4px 4px 2px #BA2928;
+  text-shadow: 4px 4px 2px #ba2928;
 }
 
 .login_clg h3 {
@@ -126,4 +126,28 @@ body {
 
 .forgot-password-link:hover {
   text-decoration: none;
+}
+.clg-container {
+  position: absolute;
+  top: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 2%;
+  width: 45vw;
+}
+
+.clg-container span {
+  color: whitesmoke;
+  font-size: 2rem;
+  text-align: right;
+  width: 50%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.clg-container .clg-logo {
+  width: 18%;
 }
