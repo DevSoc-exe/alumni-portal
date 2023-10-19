@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import clgLogo from "../Resources/ccetLogoBlack.png";
 
 export function Login() {
   const [rollNumber, setRollNumber] = useState("");
@@ -34,6 +35,7 @@ export function Login() {
 
   return (
     <div className="login_container">
+
       <div className="login_panel">
         {loggedIn ? (
           <div>
@@ -65,8 +67,8 @@ export function Login() {
                   Forgot Password
                 </span>
               </div>
-              </div>
-              
+            </div>
+
             <div className="log_sign_btn">
               <button className="log_btn" onClick={handleLogin}>
                 Log In
@@ -78,7 +80,7 @@ export function Login() {
               </Link>
             </div>
           </div>
-          
+
         )}
 
         {showForgotPassword && (
@@ -93,10 +95,16 @@ export function Login() {
           </div>
         )}
       </div>
+
       <div className="login_clg">
+        <div className="clg-container">
+          <span>Chandigarh College of Engineering & Technology</span>
+          <img className="clg-logo" src={clgLogo} />
+        </div>
         <h1>Alumni Portal</h1>
         <h3>Lorem Ipsum</h3>
       </div>
+
     </div>
   );
 }
