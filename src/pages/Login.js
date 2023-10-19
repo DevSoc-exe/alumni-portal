@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Login() {
   const [rollNumber, setRollNumber] = useState("");
@@ -41,6 +42,7 @@ export function Login() {
           </div>
         ) : (
           <div>
+
             <div className="text_input">
               <label>Roll Number:</label>
               <input
@@ -49,6 +51,7 @@ export function Login() {
                 onChange={(e) => setRollNumber(e.target.value)}
               />
             </div>
+
             <div className="text_input">
               <label>Password:</label>
               <input
@@ -62,16 +65,20 @@ export function Login() {
                   Forgot Password
                 </span>
               </div>
-            </div>
+              </div>
+              
             <div className="log_sign_btn">
               <button className="log_btn" onClick={handleLogin}>
                 Log In
               </button>
-              <button className="sign_btn" onClick={handleSignUp}>
-                Sign Up
-              </button>
+              <Link to="/signup">
+                <button className="sign_btn">
+                  Sign Up
+                </button>
+              </Link>
             </div>
           </div>
+          
         )}
 
         {showForgotPassword && (

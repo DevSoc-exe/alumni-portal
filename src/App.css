@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #222;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ body {
 }
 
 .login_clg {
-  width: calc(40% - 3rem);
+  width: calc(50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,9 +47,9 @@ body {
 }
 
 .login_clg h1 {
-  font-size: 5rem;
+  font-size: 6.75rem;
   color: #ffffff;
-  text-shadow: 2px 2px 1px 0px #BA2928;
+  text-shadow: 4px 4px 2px #BA2928;
 }
 
 .login_clg h3 {
@@ -83,36 +83,37 @@ body {
 
 .log_sign_btn {
   display: flex;
+  gap: 15px;
   justify-content: space-between;
   width: 100%;
-  margin: 2rem 0rem 1rem 0rem;
 }
 
 .log_sign_btn button {
   flex: 1;
-  margin: 0rem 1rem;
   border: none;
   border-radius: 10px;
   padding: 15px 15px;
   font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .log_sign_btn button:first-child {
-  background-color: #BA2928;
+  background-color: #ba2928;
   color: white;
 }
 
 .log_sign_btn button:last-child {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   color: black;
 }
 
 .log_sign_btn button:hover {
-  transform: scale(1.05); /* Make the button 5% larger on hover */
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px 0px, rgba(0, 0, 0, 0.1) 0px 3px 6px 0px; /* Increase shadow */
-  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px 0px,
+    rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
 }
 
 .forgot-password-link {
