@@ -22,11 +22,6 @@ export function Login() {
     alert("Forgot password functionality not implemented in this example.");
   };
 
-  const handleSignUp = () => {
-    // You can implement a sign-up logic here
-    alert("Sign up functionality not implemented in this example.");
-  };
-
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleLogin();
@@ -74,9 +69,11 @@ export function Login() {
                 Log In
               </button>
               <Link to="/signup">
+              <div className="signup_btn">
                 <button className="sign_btn">
                   Sign Up
                 </button>
+              </div>
               </Link>
             </div>
           </div>
