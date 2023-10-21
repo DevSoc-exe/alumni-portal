@@ -62,7 +62,7 @@ export function Signup() {
       <div className="login_panel">
         <div>
         <div className="back-link">
-          <Link to="/login">
+          <Link to="/">
           <img className="back-logo" src={back} alt="Back Logo" />
            Back to Login
           </Link>
