@@ -1,0 +1,120 @@
+
+
+.login_container{
+    display: flex;8
+    align-items: center;
+    justify-content: space-between; /* Create space between panels */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  
+  .login_panel  {
+    width: calc(32% - 3rem); /* Set a fixed width for the login panel */
+    text-align: left;
+    background-color: rgba(195, 215, 239, 0.7);
+    margin: 0;
+    margin-left: 3rem;
+    padding: 6rem 3rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login_clg {
+    width: calc(50% - 3rem); /* Set a fixed width for the login_clg */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    color: #ffffff; 
+    justify-content: flex-end; /* Align to the right */
+    padding: 3rem;
+  }
+  
+   .login_clg h1{
+    font-size: 6rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 1px 0px #BA2928;
+   }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  label {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .text_input {
+    padding-bottom: 3rem;
+    font-weight: 600;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 6px 0px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+  }
+  
+  .log_sign_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem 0rem 1rem 0rem;
+  }
+  
+  .log_sign_btn button:first-child {
+    flex: 1;
+    margin: 0rem 1rem;
+    background-color: #BA2928;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  
+  .log_sign_btn button:nth-child(2) {
+    flex: 1;
+    margin: 0rem 1rem;
+    background-color: #E5E5E5;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 15px ;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .forgot-password-link {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: none;
+  }
+  
