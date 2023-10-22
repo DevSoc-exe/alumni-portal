@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './login.css'
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import clgLogo from "../Resources/ccetLogoBlack.png";
+import clgLogo from "../../Resources/ccetLogoBlack.png";
+import './style.css'
 
 export function Login() {
 
@@ -83,21 +82,18 @@ export function Login() {
 
         )}
 
-          {showForgotPassword && (
+        {showForgotPassword && (
+          <div>
+            <h2>Forgot Password</h2>
             <div>
-              <h2>Forgot Password</h2>
-              <div>
-                <label>Enter Your Email:</label>
-                <input type="email" />
-              </div>
-              <button onClick={handleForgotPassword}>Submit</button>
-              <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
+              <label>Enter Your Email:</label>
+              <input type="email" />
             </div>
-          )}
-        </div>
-        <div className="login_clg">
-          <h1>Alumni Portal</h1>
-          <h3>Lorem Ipsum</h3>
+            <button onClick={handleForgotPassword}>Submit</button>
+            <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
+          </div>
+        )}
+        
         </div>
         <div className="login_clg">
           <div className="clg-container">

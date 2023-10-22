@@ -2,10 +2,9 @@ import './App.css';
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
-
 import { Forum } from "./pages/forum"
-import { Login } from "./pages/Login"
-import { Signup } from "./pages/Signup"
+import { Login } from "./pages/login"
+import { Signup } from "./pages/signup"
 
 function App() {
   return (

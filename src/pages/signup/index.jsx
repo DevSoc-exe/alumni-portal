@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import clgLogo from "../Resources/ccetLogoBlack.png";
-import back from "../Resources/back.png";
+import clgLogo from "../../Resources/ccetLogoBlack.png";
+import back from "../../Resources/back.png";
 
 export function Signup() {
   const [name, setName] = useState("");
