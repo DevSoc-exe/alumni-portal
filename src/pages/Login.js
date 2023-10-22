@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
+import './login.css'
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import clgLogo from "../Resources/ccetLogoBlack.png";
 
 export function Login() {
+
   const [rollNumber, setRollNumber] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -80,28 +83,31 @@ export function Login() {
 
         )}
 
-        {showForgotPassword && (
-          <div>
-            <h2>Forgot Password</h2>
+          {showForgotPassword && (
             <div>
-              <label>Enter Your Email:</label>
-              <input type="email" />
+              <h2>Forgot Password</h2>
+              <div>
+                <label>Enter Your Email:</label>
+                <input type="email" />
+              </div>
+              <button onClick={handleForgotPassword}>Submit</button>
+              <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
             </div>
-            <button onClick={handleForgotPassword}>Submit</button>
-            <button onClick={() => setShowForgotPassword(false)}>Cancel</button>
-          </div>
-        )}
-      </div>
-
-      <div className="login_clg">
-        <div className="clg-container">
-          <span>Chandigarh College of Engineering & Technology</span>
-          <img className="clg-logo" src={clgLogo} />
+          )}
         </div>
-        <h1>Alumni Portal</h1>
-        <h3>Lorem Ipsum</h3>
+        <div className="login_clg">
+          <h1>Alumni Portal</h1>
+          <h3>Lorem Ipsum</h3>
+        </div>
+        <div className="login_clg">
+          <div className="clg-container">
+            <span>Chandigarh College of Engineering & Technology</span>
+            <img className="clg-logo" src={clgLogo} />
+          </div>
+          <h1>Alumni Portal</h1>
+          <h3>Lorem Ipsum</h3>
+        </div>
       </div>
 
-    </div>
   );
 }
