@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './login.css'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import clgLogo from "../Resources/ccetLogoBlack.png";
 
 export function Login() {
 
@@ -22,11 +25,6 @@ export function Login() {
     alert("Forgot password functionality not implemented in this example.");
   };
 
-  const handleSignUp = () => {
-    // You can implement a sign-up logic here
-    alert("Sign up functionality not implemented in this example.");
-  };
-
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleLogin();
@@ -34,49 +32,56 @@ export function Login() {
   };
 
   return (
-      <div className="login_container">
-        <div className="login_panel">
-          {loggedIn ? (
-            <div>
-              <h2>Welcome, {rollNumber}!</h2>
-              <button onClick={() => setLoggedIn(false)}>Log Out</button>
+    <div className="login_container">
+
+      <div className="login_panel">
+        {loggedIn ? (
+          <div>
+            <h2>Welcome, {rollNumber}!</h2>
+            <button onClick={() => setLoggedIn(false)}>Log Out</button>
+          </div>
+        ) : (
+          <div>
+
+            <div className="text_input">
+              <label>Roll Number:</label>
+              <input
+                type="text"
+                value={rollNumber}
+                onChange={(e) => setRollNumber(e.target.value)}
+              />
             </div>
-          ) : (
-            <div>
-              <div className="text_input">
-                <label>Roll Number:</label>
-                <input
-                  type="text"
-                  value={rollNumber}
-                  onChange={(e) => setRollNumber(e.target.value)}
-                />
+
+            <div className="text_input">
+              <label>Password:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                onKeyDown={handleKeyPress}
+              />
+              <div className="forgot-password-link">
+                <span onClick={() => setShowForgotPassword(true)}>
+                  Forgot Password
+                </span>
               </div>
-              <div className="text_input">
-                <label>Password:</label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                />
-                <div className='forgot-password-link'>
-                  <span
-                    onClick={() => setShowForgotPassword(true)}
-                  >
-                    Forgot Password
-                  </span>
-                </div>
-              </div>
-              <div className="log_sign_btn">
-                <button className="log_btn" onClick={handleLogin}>
-                  Log In
-                </button>
-                <button className="sign_btn" onClick={handleSignUp}>
+            </div>
+
+            <div className="log_sign_btn">
+              <button className="log_btn" onClick={handleLogin}>
+                Log In
+              </button>
+              <Link to="/signup">
+              <div className="signup_btn">
+                <button className="sign_btn">
                   Sign Up
                 </button>
               </div>
+              </Link>
             </div>
-          )}
+          </div>
+
+        )}
 
           {showForgotPassword && (
             <div>
@@ -94,6 +99,15 @@ export function Login() {
           <h1>Alumni Portal</h1>
           <h3>Lorem Ipsum</h3>
         </div>
+        <div className="login_clg">
+          <div className="clg-container">
+            <span>Chandigarh College of Engineering & Technology</span>
+            <img className="clg-logo" src={clgLogo} />
+          </div>
+          <h1>Alumni Portal</h1>
+          <h3>Lorem Ipsum</h3>
+        </div>
       </div>
+
   );
 }

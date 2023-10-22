@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+
 
 import { Forum } from "./pages/forum"
 import { Login } from "./pages/Login"
