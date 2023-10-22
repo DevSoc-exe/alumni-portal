@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import clgLogo from "../../Resources/ccetLogoBlack.png";
 import back from "../../Resources/back.png";
+import './style.css'
 
 export function Signup() {
   const [name, setName] = useState("");
@@ -58,7 +59,7 @@ export function Signup() {
   };
 
   return (
-    <main>
+    <main id="signup-parent">
       <div className="login_container">
         <div className="login_panel">
           <div>
