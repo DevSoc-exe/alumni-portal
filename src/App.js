@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { Login } from "./pages/login"
 import { Signup } from "./pages/signup"
 import Forum from './pages/forum';
+import { Profile } from './pages/Profile/Profile'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/forum' element={<Forum posts={posts} currUser={currentUser}/>} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
     </React.Fragment>
