@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alumni-portal/static/css/main.45849296.css",
-    "main.js": "/alumni-portal/static/js/main.63f410f6.js",
+    "main.js": "/alumni-portal/static/js/main.15b5bda1.js",
     "static/js/787.ddd28d07.chunk.js": "/alumni-portal/static/js/787.ddd28d07.chunk.js",
     "static/media/Login-bg.png": "/alumni-portal/static/media/Login-bg.e69f2833c658d042ea29.png",
     "static/media/User.png": "/alumni-portal/static/media/User.fd91ac5bd24c70a75d5e.png",
@@ -9,11 +9,11 @@
     "static/media/back.png": "/alumni-portal/static/media/back.953bd7de2779f87a31bb.png",
     "index.html": "/alumni-portal/index.html",
     "main.45849296.css.map": "/alumni-portal/static/css/main.45849296.css.map",
-    "main.63f410f6.js.map": "/alumni-portal/static/js/main.63f410f6.js.map",
+    "main.15b5bda1.js.map": "/alumni-portal/static/js/main.15b5bda1.js.map",
     "787.ddd28d07.chunk.js.map": "/alumni-portal/static/js/787.ddd28d07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45849296.css",
-    "static/js/main.63f410f6.js"
+    "static/js/main.15b5bda1.js"
   ]
 }
