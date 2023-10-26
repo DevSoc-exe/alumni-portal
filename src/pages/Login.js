@@ -96,7 +96,7 @@ export function Login() {
       <div className="login_clg">
         <div className="clg-container">
           <span>Chandigarh College of Engineering & Technology</span>
-          <img className="clg-logo" src={clgLogo} />
+          <img className="clg-logo" src={clgLogo} alt="text"/>
         </div>
         <h1>Alumni Portal</h1>
         <h3>Lorem Ipsum</h3>
