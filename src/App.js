@@ -6,6 +6,8 @@ import { Login } from "./pages/login"
 import { Signup } from "./pages/signup"
 import Forum from './pages/forum';
 import { Profile } from './pages/Profile/Profile'
+import Navigate from './pages/navigate';
+
 
 function App() {
   
@@ -15,10 +17,11 @@ function App() {
   return (
     <React.Fragment>
       <Routes>
-        <Route path='/' element={<Profile />} />
+        <Route path='/' element={<Navigate />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/forum' element={<Forum posts={posts} currUser={currentUser}/>} />
-        <Route path='/profile' element={<Forum />} />
-        <Route path='/signup' element={<Forum />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </React.Fragment>
   
