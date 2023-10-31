@@ -15,10 +15,10 @@ function App() {
   return (
     <React.Fragment>
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/' element={<Profile />} />
         <Route path='/forum' element={<Forum posts={posts} currUser={currentUser}/>} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route path='/profile' element={<Forum />} />
+        <Route path='/signup' element={<Forum />} />
       </Routes>
     </React.Fragment>
   
